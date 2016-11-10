@@ -1,25 +1,27 @@
 const div = React.DOM.div
 const h1 = React.DOM.h1
 
-// creating you element
+// creating you element -- composite component
 const MyTitle = React.createClass({
   render(){
     return (
       div(null,
-        h1(null, 'What is reality pt. 1')
+        h1({ style: { color: this.props.color }}, this.props.title)
       )
     )
   }
 })
 
+const MyTitleFactory = React.createFactory(MyTitle)
+const ce = React.createElement
+
 // null is for the attributes you pass into the element ie. style="color: 'green'"
 // you need div to be a parent element for the instances of your class
 const MyFirstComponent = (
-  div({ style: { color: 'green' }},
-    React.createElement(MyTitle, null),
-    React.createElement(MyTitle, null),
-    React.createElement(MyTitle, null),
-    React.createElement(MyTitle, null)
+  div(null,
+    MyTitleFactory({ title: 'Props are great', color: 'rebeccapurple'}),
+    ce(MyTitle, {title: 'Props are so cool', color: 'mediumaquamarine'}),
+    React.createElement(MyTitle, {title: 'Use props everywhere', color: 'peru'})
   )
 )
 
