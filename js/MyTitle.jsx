@@ -4,7 +4,7 @@ const div = React.DOM.div
 const h1 = React.DOM.h1
 
 // creating you element -- composite component
-// can only return on element per component ==> wrap in div to include multiple elements
+// can only return one element per component ==> wrap in div to include multiple elements
 const MyTitle = React.createClass({
   render () {
     return (
