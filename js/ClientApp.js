@@ -1,7 +1,8 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-const div = React.DOM.div
 const MyTitle = require('./MyTitle')
+
+const div = React.DOM.div
 
 const MyTitleFactory = React.createFactory(MyTitle)
 const ce = React.createElement
