@@ -1,16 +1,7 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 const div = React.DOM.div
-const h1 = React.DOM.h1
-
-// creating you element -- composite component
-const MyTitle = React.createClass({
-  render(){
-    return (
-      div(null,
-        h1({ style: { color: this.props.color }}, this.props.title)
-      )
-    )
-  }
-})
+const MyTitle = require('./MyTitle')
 
 const MyTitleFactory = React.createFactory(MyTitle)
 const ce = React.createElement
