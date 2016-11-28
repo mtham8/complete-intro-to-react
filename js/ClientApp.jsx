@@ -1,17 +1,13 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-const MyTitle = require('./MyTitle')
+const Landing = require('./Landing')
+const { Router, Route, hashHistory } = require('react-router')
 
 // you need div to be a parent element for the instances of your class
 const App = () => (
-  <div className='app-container'>
-    <div className='home-info'>
-      <h1 className='title'>V1d305</h1>
-      <MyTitle title="Sup Bitches" color="green" />
-      <input className='search' type='text' placeholder='Search' />
-      <button className='browse-all'> or Browse All </button>
-    </div>
-  </div>
+  <Router history={hashHistory}>
+    <Route path='/' component={Landing} />
+  </Router>
 )
 
 ReactDOM.render(<App />, document.getElementById('app'))

@@ -16,14 +16,12 @@ const MyTitle = React.createClass({
 })
 */
 
-const MyTitle = function ({color, title}) {
-  return (
-    <div>
-      <h1 style={{color: color}}>
-        {title}
-      </h1>
-    </div>
-  )
-}
+const MyTitle = ({color, title}) => (
+  <div>
+    <h1 style={{color: color}}>
+      {title}
+    </h1>
+  </div>
+)
 
 module.exports = MyTitle
