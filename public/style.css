@@ -163,13 +163,13 @@ a > .show-card {
   width: 100%;
   overflow: hidden;
   background-color: #fafafa;
-  padding: 8px 30px;
+  padding: 2px 30px;
 }
 
 .brand {
   font-family: Skia;
   font-weight: normal;
-  color: #B10DC9;
+  color: #000000;
   margin: 0;
 }
 

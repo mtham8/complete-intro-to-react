@@ -11,7 +11,7 @@ const ShowCard = (props) => (
   </div>
 )
 
-const { string } = React.PropTypes.isRequired
+const { string } = React.PropTypes
 // makes sure that props is passed as an object
 ShowCard.propTypes = {
   title: string,
