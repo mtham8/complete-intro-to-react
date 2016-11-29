@@ -7,7 +7,7 @@ const Search = () => (
     <div className='shows'>
       {data.shows.map(show => (
         // show={show} ==> show= is the name of the property we're passing it down as
-        <ShowCard { ...show } key={ show.imdbID } />
+        <ShowCard {...show} key={show.imdbID} />
       ))}
     </div>
   </div>
