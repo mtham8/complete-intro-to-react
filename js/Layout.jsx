@@ -6,7 +6,7 @@ const Layout = (props) => (
   </div>
 )
 
-const { element } = React.PropTypes.element
+const { element } = React.PropTypes
 Layout.propTypes = {
   children: element
 }
