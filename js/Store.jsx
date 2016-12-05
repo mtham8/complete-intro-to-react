@@ -22,7 +22,10 @@ const reduceSearchTerm = (state, action) => {
   return newState
 }
 
-const store = redux.createStore(rootReducer)
+const store = redux.createStore(rootReducer, initialState, redux.compose(
+  typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : (f) => f
+))
+// redux devTools require app to be on http
 
 const mapStateToProps = (state) => ({ searchTerm: state.searchTerm })
 
