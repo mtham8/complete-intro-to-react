@@ -4,6 +4,7 @@ const Header = require('./Header')
 const { object, string } = React.PropTypes
 const { connector } = require('./Store')
 
+// TODO: Refactor this into a stateless component
 const Search = React.createClass({
   propTypes: {
     route: object,
